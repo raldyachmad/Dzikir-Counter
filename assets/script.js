@@ -22,7 +22,7 @@ function vibrationMode(){
 		console.log("Tidak Getar");
 	}else{
 		if (count == target.textContent) {
-			window.navigator.vibrate(1000);
+			window.navigator.vibrate([1000 0 1000]);
 		} else {
 			window.navigator.vibrate(100);
 		}
