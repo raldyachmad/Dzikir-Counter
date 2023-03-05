@@ -29,20 +29,43 @@ body {
 
 #number {
   font-size: 72px;
+  line-height: 100px;
+  /* border: solid 2px black; */
+}
+
+#target_text{
+	font-weight: 500;
+	/* border: solid 2px black; */
+	margin-top: 0;
 }
 
 #target {
-  font-size: 22px;
-  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 500;
   color: #537fe7;
 }
-h4 {
-  margin-top: 55px;
+
+.first,.second,.third{
+	width: 100%;
+	height: calc(100vh/3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-h1,
-p {
-  line-height: 0;
+
+.first{
+	font-size: 28px;
+	font-weight: 500;
+	opacity: 15%;
+	padding-top: 40px;
 }
+
+.third{
+	font-size: 0.9rem;
+	opacity: 10%;
+	padding-bottom: 60px;
+}
+
 .round {
   display: flex;
   flex-direction: column;
@@ -67,23 +90,27 @@ ul {
 }
 
 .header {
+	z-index: 100;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
 }
 .logo {
-  font-weight: 300;
+  z-index: 99;
+	font-weight: 300;
   font-size: 20px;
+  
 }
 .logo .logo-bld {
   font-weight: 600;
+  color: inherit;
 }
 
 nav {
   /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); */
   padding: 10px 20px;
-  max-width: 968px;
+  /* max-width: 968px; */
   /* height: 3rem; */
   display: flex;
   justify-content: space-between;
@@ -91,10 +118,14 @@ nav {
 }
 
 .nav_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  bottom: 0px;
+  bottom: -1000px;
   left: 0;
   width: 100%;
+  height: 23%;
   background-color: #fff;
   padding: 2rem 1.5rem 4rem;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
@@ -104,8 +135,10 @@ nav {
 
 .nav_list {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+  gap: 6px;
   color: inherit;
+  /* padding-top: 20px; */
 }
 
 .nav_item {
@@ -113,7 +146,7 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100px;
+  width: 85px;
   font-size: 12px;
   color: inherit;
   /* border: 1px solid black; */
@@ -122,7 +155,7 @@ nav {
 .close {
   position: absolute;
   right: 1.3rem;
-  bottom: 0.5rem;
+  bottom: 0.8rem;
 }
 
 .active {
@@ -131,6 +164,10 @@ nav {
 
 .nav_item .material-symbols-outlined {
   padding-bottom: 8px;
+}
+
+.display_menu{
+	bottom: 0;
 }
 
 /* DARK MODE */
@@ -152,6 +189,6 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-.nav_item_dark{
-	color: #fff;
+.nav_item_dark {
+  color: #fff;
 }
