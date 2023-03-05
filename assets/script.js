@@ -1,24 +1,36 @@
 let number = document.getElementById("number");
-const target = document.getElementById("target");
-let count = 0;
+let target = document.getElementById("target");
+let getar = document.getElementById("vibration");
+let count = 0,vibrate = false;;
 function reset() {
-  number.innerText=0;
-  count=0;
+  number.innerText = 0;
+  count = 0;
   target.textContent = "-";
 }
 
-function vibrationMode(){
-	if (count == target.textContent) {
-		window.navigator.vibrate(1000);
-	  } else {
-		window.navigator.vibrate(100);
-	  }
-}
+getar.addEventListener("click", function vibrationMode() {
+  if (vibrate == true) {
+    vibrate = false;
+    window.navigator.vibrate(0);
+    console.log("Tidak Getar");
+  } else if (vibrate == false) {
+    vibrate = true;
+    if (count == target.textContent) {
+      window.navigator.vibrate(1000);
+    } else {
+      window.navigator.vibrate(100);
+    }
+    console.log("Getar");
+  }
+});
+// function vibrationMode() {
+
+// }
 
 function increment() {
   count++;
   number.textContent = count;
-  vibrationMode()
+  vibrationMode();
 }
 function addTarget() {
   target.textContent = prompt("Masukan Target");
