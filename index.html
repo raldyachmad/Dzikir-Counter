@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>Dzikir Counter By RALDY ACHMAD</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+	<header class="header" id="header">
+		<nav class="nav container">
+		  <div class="logo"><span class="logo-bld">Dzikir</span>Counter</div>
+  
+		  <div class="nav_menu" id="nav-menu">
+			<ul class="nav_list grid">
+			  <li class="nav_item" onclick="addTarget()">
+				<span class="material-symbols-outlined">add_circle</span> Tambah Target
+			  </li>
+			  <li class="nav_item" onclick="reset()">
+				<span class="material-symbols-outlined">
+					restart_alt
+					</span> Reset 
+			  </li>
+			  <li class="nav_item" onclick="vibrationMode()">
+				<span class="material-symbols-outlined">
+					vibration
+					</span> Mode Getar
+			  </li>
+			  <li class="nav_item">
+				<span class="material-symbols-outlined">
+					light_mode
+					</span> Tema
+			  </li>
+			</ul>
+			<span class="material-symbols-outlined close">
+				close
+				</span>
+		  </div>
+  
+		  <div class="nav_btns">
+			<div class="nav_toggle" id="nav-toggle">
+				<span class="material-symbols-outlined">
+					widgets
+					</span>
+			</div>
+		  </div>
+		</nav>
+	  </header>
+<div id="container" onclick="increment()">
+ <div class="round">
+		<h1 id="number">0</h1>
+		<h4>target</h4>
+		<p id="target">-</p>
+	</div>
+	<!-- <button onclick="addTarget()"><i class="uil uil-plus-circle"></i> Tambah Target</button>
+	<button class="reset" onclick="reset()"><i class="uil uil-history-alt"></i> reset</button> -->
+	<div>
+<script src="assets/script.js"></script>
+</body>
+</html>
