@@ -12,8 +12,8 @@
 		<nav class="nav container">
 		  <div class="logo"><span class="logo-bld">Dzikir</span>Counter</div>
   
-		  <div class="nav_menu" id="nav-menu">
-			<ul class="nav_list grid">
+		  <div class="nav_menu" id="nav_menu">
+			<ul class="nav_list grid" >
 			  <li class="nav_item" onclick="addTarget()">
 				<span class="material-symbols-outlined">add_circle</span> Tambah Target
 			  </li>
@@ -27,7 +27,7 @@
 					vibration
 					</span> Mode Getar
 			  </li>
-			  <li class="nav_item">
+			  <li class="nav_item" id="theme">
 				<span class="material-symbols-outlined">
 					light_mode
 					</span> Tema
@@ -48,13 +48,11 @@
 		</nav>
 	  </header>
 <div id="container" onclick="increment()">
- <div class="round">
+ <div class="round" id="round">
 		<h1 id="number">0</h1>
-		<h4>target</h4>
+		<h4 id="target_text">Target</h4>
 		<p id="target">-</p>
 	</div>
-	<!-- <button onclick="addTarget()"><i class="uil uil-plus-circle"></i> Tambah Target</button>
-	<button class="reset" onclick="reset()"><i class="uil uil-history-alt"></i> reset</button> -->
 	<div>
 <script src="assets/script.js"></script>
 </body>
