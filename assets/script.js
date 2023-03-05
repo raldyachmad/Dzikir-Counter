@@ -10,15 +10,18 @@ function reset() {
     count = 0;
     target.textContent = "-";
   }
+  nvMenu.classList.remove("display_menu");
 }
 
 getar.addEventListener("click", function () {
   if (vibrate == true) {
     vibrate = false;
     getar.classList.remove("active");
+	nvMenu.classList.remove("display_menu");
   } else if (vibrate == false) {
     vibrate = true;
     getar.classList.add("active");
+	nvMenu.classList.remove("display_menu");
   }
 });
 
@@ -35,15 +38,18 @@ function vibrationMode() {
     console.log("Getar");
   }
 }
-
+let desc = document.getElementById("desc");
 function increment() {
   count++;
   number.textContent = count;
   vibrationMode();
+  if(count!=0){
+	desc.innerText=""
+  }
 }
 function addTarget() {
   target.textContent = prompt("Masukan Target");
-  //   count -= 1;
+  nvMenu.classList.remove("display_menu");
 }
 
 // Mode Malam
@@ -53,6 +59,9 @@ let round = document.getElementById("round");
 let num = document.getElementById("number");
 let trgt = document.getElementById("target_text");
 let nvMenu = document.getElementById("nav_menu");
+let logo = document.getElementById("logo");
+let navToggle = document.getElementById("nav_toggle");
+let copyright = document.getElementById("copyright");
 let darkMode = false;
 
 theme.addEventListener("click", function () {
@@ -69,7 +78,13 @@ theme.addEventListener("click", function () {
     trgt.classList.add("color_dark");
     num.classList.add("color_dark");
     nvMenu.classList.add("nav_menu_dark");
-  } else if (darkMode == false) {
+    logo.classList.add("nav_item_dark");
+	navToggle.classList.add("nav_item_dark");
+	desc.classList.add("nav_item_dark");
+	copyright.classList.add("nav_item_dark");
+
+	nvMenu.classList.remove("display_menu");
+} else if (darkMode == false) {
     theme.innerHTML = '<span class="material-symbols-outlined">light_mode</span>Tema Terang';
     container.classList.remove("container_dark");
     round.classList.remove("round_dark");
@@ -77,5 +92,23 @@ theme.addEventListener("click", function () {
     trgt.classList.remove("color_dark");
     num.classList.remove("color_dark");
     nvMenu.classList.remove("nav_menu_dark");
+    logo.classList.remove("nav_item_dark");
+    navToggle.classList.remove("nav_item_dark");
+	desc.classList.remove("nav_item_dark");
+	copyright.classList.remove("nav_item_dark");
+
+	nvMenu.classList.remove("display_menu");
   }
+});
+
+// display Menu
+let menu = document.getElementById("nav_toggle");
+let navClose = document.getElementById("nav_close");
+
+menu.addEventListener("click", () => {
+  nvMenu.classList.add("display_menu");
+});
+
+navClose.addEventListener("click", () => {
+  nvMenu.classList.remove("display_menu");
 });
