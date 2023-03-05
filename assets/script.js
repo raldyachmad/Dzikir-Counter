@@ -46,11 +46,12 @@ function increment() {
   if(count!=0){
 	desc.innerText=""
   }
-}
+	nvMenu.classList.remove("display_menu");
+};
 function addTarget() {
   target.textContent = prompt("Masukan Target");
   nvMenu.classList.remove("display_menu");
-}
+};
 
 // Mode Malam
 let container = document.getElementById("container");
