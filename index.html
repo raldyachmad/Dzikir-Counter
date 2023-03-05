@@ -10,7 +10,7 @@
 <body>
 	<header class="header" id="header">
 		<nav class="nav container">
-		  <div class="logo"><span class="logo-bld">Dzikir</span>Counter</div>
+		  <div class="logo" id="logo"><span class="logo-bld">Dzikir</span>Counter</div>
   
 		  <div class="nav_menu" id="nav_menu">
 			<ul class="nav_list grid" >
@@ -33,13 +33,13 @@
 					</span> Tema
 			  </li>
 			</ul>
-			<span class="material-symbols-outlined close">
+			<span class="material-symbols-outlined close" id="nav_close">
 				close
 				</span>
 		  </div>
   
 		  <div class="nav_btns">
-			<div class="nav_toggle" id="nav-toggle">
+			<div class="nav_toggle" id="nav_toggle">
 				<span class="material-symbols-outlined">
 					widgets
 					</span>
@@ -48,12 +48,16 @@
 		</nav>
 	  </header>
 <div id="container" onclick="increment()">
- <div class="round" id="round">
-		<h1 id="number">0</h1>
-		<h4 id="target_text">Target</h4>
-		<p id="target">-</p>
+	<div class="first" id="desc">Klik Dimanapun</div>
+	<div class="second">
+ 		<div class="round" id="round">
+			<h1 id="number">0</h1>
+			<h4 id="target_text">Target</h4>
+			<p id="target">-</p>
+		</div>
 	</div>
-	<div>
+	<div class="third" id="copyright">Copyright © 2023 Raldy Achmad</div>
+</div>
 <script src="assets/script.js"></script>
 </body>
 </html>
