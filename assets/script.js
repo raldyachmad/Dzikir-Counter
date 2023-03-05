@@ -8,23 +8,27 @@ function reset() {
   target.textContent = "-";
 }
 
-getar.addEventListener("click", function vibrationMode() {
+getar.addEventListener("click", function () {
   if (vibrate == true) {
     vibrate = false;
-    window.navigator.vibrate(0);
-    console.log("Tidak Getar");
-  } else if (vibrate == false) {
-    vibrate = true;
-    if (count == target.textContent) {
-      window.navigator.vibrate(1000);
-    } else {
-      window.navigator.vibrate(100);
-    }
-    console.log("Getar");
-  }
+} else if (vibrate == false) {
+	vibrate = true;
+}
 });
 // function vibrationMode() {
-
+function vibrationMode(){
+	if(vibrate==false){
+		window.navigator.vibrate(0);
+		console.log("Tidak Getar");
+	}else{
+		if (count == target.textContent) {
+			window.navigator.vibrate(1000);
+		} else {
+			window.navigator.vibrate(100);
+		}
+		console.log("Getar");
+	}
+}
 // }
 
 function increment() {
