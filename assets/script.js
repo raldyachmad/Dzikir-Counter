@@ -80,13 +80,13 @@ if (typeof Storage !== "undefined") {
   let addTarget= document.getElementById("addTarget");
   addTarget.addEventListener('click',() => {
     let trgt = prompt("Masukan Target");
-    
+    if (trgt == null) {
+        target.textContent = "-";
+     } 
     localStorage.setItem("target",trgt);
     console.log(trgt);
     target.innerText = localStorage.getItem("target");
-    // if (trgt == null) {
-      //   target.textContent = "-";
-      // }
+
       nvMenu.classList.remove("display_menu");
     });
     target.innerText = localStorage.getItem("target");
