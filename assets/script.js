@@ -81,9 +81,9 @@ if (typeof Storage !== "undefined") {
   addTarget.addEventListener('click',() => {
     let trgt = prompt("Masukan Target");
     if (trgt == null) {
-        target.textContent = "-";
-     } 
-    localStorage.setItem("target",trgt);
+        target.textContent = localStorage.setItem("target","-" ); ;
+     }else{
+    localStorage.setItem("target",trgt);} 
     console.log(trgt);
     target.innerText = localStorage.getItem("target");
 
